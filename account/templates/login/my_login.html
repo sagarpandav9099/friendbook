@@ -55,20 +55,21 @@
                       <h6 class="form-label fw-bold">Username</h6>
                       {{ form.username }}
                    </div>
+                   
                    <div class="form-group text-start">
-                     <h6 class="form-label fw-bold">Email Address</h6>
-                     {{ form.email }}
-                  </div>
-                   <div class="form-group text-start">
-                      <h6 class="form-label fw-bold">Your Password</h6>
-                     {{ form.password1 }}
+                      <h6 class="form-label fw-bold">Password</h6>
+                     {{ form.password }}
                    </div>
-                   <div class="form-group text-start">
-                      <h6 class="form-label fw-bold">Confirm Password</h6>
-                     {{ form.password2 }}
+                  
+                   <div class="d-flex justify-content-between">
+                     <div class="form-check d-inline-block m-0">
+                        <input type="checkbox" class="form-check-input">
+                        <h6 class="form-check-label fw-bold">Remember Me</h6>
+                     </div>
+                      <a href="{% url 'reset_password' %}" class="font-italic">Forgot Password?</a>
                    </div>
-                   <button type="button" class="btn btn-primary mt-4 fw-semibold text-uppercase w-100">sign up</button>
-                  <h6 class="mt-5">Already Have An Account ? <a href="{% url 'my-login' %}">Login</a></h6>
+                   <button type="submit" class="btn btn-primary mt-4 fw-semibold text-uppercase w-100">Sign Up</button>
+                   <h6 class="mt-5">Don't Have An Account ? <a href="{% url 'register' %}">Sign Up</a></h6>
                 </form>
              </div>
           </div>
